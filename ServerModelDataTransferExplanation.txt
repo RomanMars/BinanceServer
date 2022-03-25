@@ -1,0 +1,14 @@
+ServerModelDataTransferExplanation
+
+web socket on get data event:
+
+binanceserver::ASKSv binanceserver::BIDSv -> Whole data (bids, asks) data
+binanceserver::asksv binanceserver::bidsv -> Data geted on current update
+
+store asksv, bidsv and current update data -> in data buffer
+
+send buffer via sockets
+or store in memmory
+examples: shared memory, memory maps, boost interprocess or similar libs
+
+i think shared memory is best solution -> because it's fast and effective
